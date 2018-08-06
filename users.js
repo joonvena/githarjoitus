@@ -5,7 +5,7 @@ var users = require('../userservice');
 
 router.route('/')
 .get(function(req, res, next) {
-  res.json(users.users());
+  res.redirect('/users');
 })
 .post(function(req, res) {
 	res.json(users.adduser(req, res));
