@@ -23,5 +23,12 @@ router.route('/:id')
 	res.json(users.updateuser(req, res));
 });
 
+/* This is a dev version of the software */
+
+router.route('/users/:id/info')
+.get(function(req, res) {
+	res.json(users.adduser(req, res));
+});
+
 
 module.exports = router;
